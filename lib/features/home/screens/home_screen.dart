@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:file_converter/features/home/widgets/feature_card.dart';
 import 'package:file_converter/features/image_resizer/screens/image_resizer_screen.dart';
 // Import other feature screens as they are created
-// import 'package:file_converter/features/video_converter/screens/video_converter_screen.dart';
+import 'package:file_converter/features/video_converter/screens/video_converter_screen.dart';
 // import 'package:file_converter/features/pdf_merger/screens/pdf_merger_screen.dart';
 // import 'package:file_converter/features/pdf_resizer/screens/pdf_resizer_screen.dart';
 
@@ -38,7 +38,10 @@ class HomeScreen extends StatelessWidget {
               icon: Icons.movie_creation_outlined,
               title: 'Convert Video',
               onTap: () {
-                // TODO: Navigate to VideoConverterScreen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const VideoConverterScreen()),
+                );
               },
             ),
             FeatureCard(
